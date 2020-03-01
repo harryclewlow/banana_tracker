@@ -10,10 +10,11 @@ class BananaTrackerHelper
     public function getSortedRoute(string $routeJson): array
     {
         $route = $this->convertRouteFromJson($routeJson);
-        $sortedList = [];
         $fromList = array_column($route, 'from');
         $toList = array_column($route, 'to');
+
         $index = $this->getFirstStopInRouteIndex($fromList, $toList);
+        $sortedList = [];
         $sortedList[] = $fromList[$index];
 
         while (count($sortedList) < count($route) + 1) {
