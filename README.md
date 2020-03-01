@@ -1,7 +1,7 @@
 # Banana Tracker
 
 ## Set Up
-Run `composer install`. This is to install php unit.
+Run `composer install` after clone this repo. This is to install php unit.
 
 ## To Run
 In oder to run, open the project in command line and navigate to the scripts directory. Run the BananaTrackerCommand.php script, passing in the JSON route.
