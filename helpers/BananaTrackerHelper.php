@@ -35,8 +35,8 @@ class BananaTrackerHelper
     {
         $decodedRoute = json_decode($route, true);
 
-        if ($decodedRoute === null || json_last_error() !== JSON_ERROR_NONE) {
-            throw new Exception('json is invalid');
+        if ($decodedRoute === null || json_last_error() !== JSON_ERROR_NONE || empty($decodedRoute)) {
+            throw new Exception('Json is invalid');
         }
 
         return $decodedRoute;
